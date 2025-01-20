@@ -308,3 +308,28 @@ footer {
 .faq-card p {
     margin-top: 10px;
 }
+
+/* адаптивность */
+@media (max-width: 768px) {
+    .service-grid, .testimonial-grid, .partner-grid, .faq-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card, .testimonial-card, .partner-item, .faq-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
