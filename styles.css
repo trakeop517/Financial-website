@@ -115,6 +115,118 @@ footer {
     padding: 60px 0 20px 0;
     margin-top: 40px;
 }
+
+/* Стили для секции партнеров */
+.partners {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.partners h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #2c3e50;
+}
+
+.partner-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Выравниваем элементы по высоте */
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.partner-item {
+    text-align: center;
+    max-width: 300px;
+    flex: 1; /* Равномерное распределение пространства */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Фиксированные размеры для изображений */
+.partner-item img {
+    width: 150px; /* Фиксированная ширина */
+    height: 150px; /* Фиксированная высота */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+    margin-bottom: 20px;
+}
+
+.partner-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+    flex-grow: 1; /* Описание занимает оставшееся пространство */
+}
+
+/* Декоративная линия */
+.partner-item::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: #3498db;
+    margin: 20px auto 0; /* Выравниваем полоску по нижнему краю */
+}
+
+/* Декоративная линия */
+.partner-item::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: #3498db;
+    margin: 20px auto;
+}
+
+/* Секция "FAQ" */
+.faq {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.faq-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.faq-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-card details {
+    font-size: 1rem;
+    color: #666;
+}
+
+.faq-card summary {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.faq-card p {
+    margin-top: 10px;
+}
+
 /* Услуги на главной странице*/
 .services {
     padding: 80px 0;
@@ -489,4 +601,68 @@ footer {
     border-top: 1px solid #34495e;
     font-size: 0.9rem;
     color: #ddd;
+}
+
+/* Секция "Обучающие материалы" */
+.learning {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.learning h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.learning-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.learning-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.learning-card i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.learning-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.learning-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.learning-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.learning-card .btn:hover {
+    background-color: #2980b9;
 }

@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Финансовый консалтинг</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
     <header>
         <div class="container">
             <div class="logo">
@@ -20,20 +24,26 @@
                     <li><a href="about.html"><i class="fas fa-users"></i> О нас</a></li>
                     <li><a href="blog.html"><i class="fas fa-blog"></i> Блог</a></li>
                     <li><a href="form.html"><i class="fas fa-headset"></i> Консультация</a></li>
-                    <li>
-                        <label for="theme-toggle" class="theme-toggle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
-                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                            </svg>
-                        </label>
-                    </li>
+                           <li>
+                                <label for="theme-toggle" class="theme-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </label>
+                           </li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
         <section class="hero">
+            <div class="video-container">
+                <video autoplay muted loop id="hero-video">
+                    <source src="images/hero-bg.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+                <div class="video-overlay"></div> <!-- Затемняющий слой -->
+            </div>
             <div class="container">
                 <h1>Ваш надежный партнер в мире финансов</h1>
                 <p>Мы предлагаем профессиональные консультации по управлению финансами, инвестициям и планированию бюджета.</p>
@@ -72,17 +82,17 @@
                     <div class="testimonial-card">
                         <img src="images/client1.jpg" alt="Клиент 1">
                         <p>"Отличный сервис! Помогли мне разобраться с инвестициями и увеличить доход."</p>
-                        <span>- Диана Иваненко</span>
+                        <span>- Михаил Сергеев</span>
                     </div>
                     <div class="testimonial-card">
                         <img src="images/client2.jpg" alt="Клиент 2">
                         <p>"Спасибо за помощь в планировании бюджета. Теперь я могу спокойно смотреть в будущее."</p>
-                        <span>- Мария Лаврова</span>
+                        <span>- Лиана Сараева</span>
                     </div>
                     <div class="testimonial-card">
                         <img src="images/client3.jpg" alt="Клиент 3">
-                        <p>"Налоговая оптимизация спасла меня от больших расходов. Рекомендую!"</p>
-                        <span>- Алексей Смирнов</span>
+                        <p>"Налоговая оптимизация спасла меня от больших расходов. Рекомендую! Огромное спасибо!"</p>
+                        <span>- Дмитрий Глазков</span>
                     </div>
                 </div>
             </div>
@@ -91,7 +101,6 @@
             <div class="container">
                 <h2>Наши крупнейшие партнеры:</h2>
                 <div class="partner-grid">
-                    <!-- Логотипы партнеров -->
                     <div class="partner-item">
                         <img src="images/partner1.png" alt="Сбербанк">
                         <div class="partner-description">
@@ -139,7 +148,6 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="container">
             <div class="footer-grid">
