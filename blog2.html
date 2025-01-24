@@ -4,35 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Что такое планирование бюджета? | Wealthix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/logo.png" alt="Логотип Финансовый консалтинг">
+                <img src="images/logo.png" alt="Логотип Wealthix">
                 <span class="logo-text">Wealthix</span>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="form.html">Консультация</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="services.html"><i class="fas fa-hand-holding-usd"></i> Услуги</a></li>
+                    <li><a href="about.html"><i class="fas fa-users"></i> О нас</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="form.html"><i class="fas fa-headset"></i> Консультация</a></li>
+                            <li>
+                                <label for="theme-toggle" class="theme-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </label>
+                            </li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
         <section class="blog-post">
+            <div class="container">
+                <h1>Что такое планирование бюджета?</h1>
+                <img src="images/blog2.jpg" alt="Что такое планирование бюджета?" class="blog-image">
+                <p>Планирование бюджета — это процесс управления доходами и расходами с целью достижения финансовых целей. Оно помогает контролировать денежные потоки, избегать долгов и накапливать сбережения.</p>
+                <h2>Основные принципы планирования бюджета</h2>
+                <p>Планирование бюджета включает:</p>
+                <ul>
+                    <li><strong>Учёт доходов и расходов</strong> — фиксация всех поступлений и трат.</li>
+                    <li><strong>Постановка целей</strong> — определение, на что вы хотите накопить (например, отпуск, покупка жилья).</li>
+                    <li><strong>Контроль расходов</strong> — сокращение ненужных трат.</li>
+                </ul>
+                <h2>Зачем нужно планирование бюджета?</h2>
+                <p>Планирование бюджета помогает:</p>
+                <ul>
+                    <li>Избежать финансовых трудностей.</li>
+                    <li>Накопить на крупные покупки.</li>
+                    <li>Обеспечить финансовую стабильность.</li>
+                </ul>
+                <h2>Инструменты для планирования бюджета</h2>
+                <p>Для планирования бюджета можно использовать:</p>
+                <ul>
+                    <li>Блокнот и ручку.</li>
+                    <li>Таблицы Excel или Google Sheets.</li>
+                    <li>Мобильные приложения для учёта финансов.</li>
+                </ul>
+                <a href="blog.html" class="btn">Вернуться к блогу</a>
+            </div>
         </section>
     </main>
-
-    <footer>
+    <footer class="footer-mini">
         <div class="container">
-            <p>&copy; 2025 Финансовый консалтинг. Все права защищены.</p>
+            <p>&copy; 2025 Wealthix. Все права защищены.</p>
         </div>
     </footer>
 </body>

@@ -4,37 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Что такое инвестирование? | Wealthix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/logo.png" alt="Логотип Финансовый консалтинг">
+                <img src="images/logo.png" alt="Логотип Wealthix">
                 <span class="logo-text">Wealthix</span>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="form.html">Консультация</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="services.html"><i class="fas fa-hand-holding-usd"></i> Услуги</a></li>
+                    <li><a href="about.html"><i class="fas fa-users"></i> О нас</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="form.html"><i class="fas fa-headset"></i> Консультация</a></li>
+                            <li>
+                                <label for="theme-toggle" class="theme-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </label>
+                            </li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
         <section class="blog-post">
             <div class="container">
+                <h1>Что такое инвестирование?</h1>
+                <img src="images/blog1.jpg" alt="Что такое инвестирование?" class="blog-image">
+                <p>Инвестирование — это процесс вложения денег или других ресурсов с целью получения дохода или прибыли в будущем. Инвестиции могут быть как финансовыми (например, акции, облигации), так и реальными (например, недвижимость, бизнес).</p>
+                <h2>Основные виды инвестиций</h2>
+                <p>Существует несколько основных видов инвестиций:</p>
+                <ul>
+                    <li><strong>Акции</strong> — доли в компании, которые дают право на часть её прибыли.</li>
+                    <li><strong>Облигации</strong> — долговые обязательства, по которым инвестор получает фиксированный доход.</li>
+                    <li><strong>Недвижимость</strong> — инвестиции в жильё, коммерческую недвижимость или землю.</li>
+                    <li><strong>ETF</strong> — биржевые фонды, которые позволяют инвестировать в набор активов.</li>
+                </ul>
+                <h2>Зачем нужно инвестировать?</h2>
+                <p>Инвестирование помогает:</p>
+                <ul>
+                    <li>Приумножить капитал.</li>
+                    <li>Защитить деньги от инфляции.</li>
+                    <li>Обеспечить финансовую независимость в будущем.</li>
+                </ul>
+                <h2>Риски инвестирования</h2>
+                <p>Инвестиции всегда связаны с рисками. Например, стоимость акций может упасть, а недвижимость — обесцениться. Поэтому важно диверсифицировать портфель и тщательно анализировать рынок.</p>
+                <a href="blog.html" class="btn">Вернуться к блогу</a>
             </div>
         </section>
     </main>
-
-    <footer>
+    <footer class="footer-mini">
         <div class="container">
-            <p>&copy; 2025 Финансовый консалтинг. Все права защищены.</p>
+            <p>&copy; 2025 Wealthix. Все права защищены.</p>
         </div>
     </footer>
 </body>
