@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас | Финансовый консалтинг</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
+<body class="dark-theme">
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+    <header class="about-header">
         <div class="container">
             <div class="logo">
                 <img src="images/logo.png" alt="Логотип Финансовый консалтинг">
@@ -15,17 +19,25 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="form.html">Консультация</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="services.html"><i class="fas fa-hand-holding-usd"></i> Услуги</a></li>
+                    <li><a href="about.html"><i class="fas fa-users"></i> О нас</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="form.html"><i class="fas fa-headset"></i> Консультация</a></li>
+                            <li>
+                                <label for="theme-toggle" class="theme-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </label>
+                            </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Секция "О нас" -->
         <section class="about-hero">
             <div class="container">
                 <h1>О нас</h1>
@@ -33,17 +45,142 @@
             </div>
         </section>
 
+        <!-- Секция "Миссия компании" -->
         <section class="mission">
             <div class="container">
                 <h2>Наша миссия</h2>
                 <p>Мы стремимся помочь каждому клиенту достичь финансовой стабильности и успеха, предоставляя профессиональные консультации и индивидуальные решения.</p>
             </div>
         </section>
-    </main>
+
+        <!-- Секция "Достижения" -->
+        <section class="achievements">
+            <div class="container">
+                <h2>Наши достижения</h2>
+                <div class="achievement-grid">
+                    <div class="achievement-card">
+                        <i class="fas fa-users"></i>
+                        <h3>50000+</h3>
+                        <p>Довольных клиентов</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>10 лет</h3>
+                        <p>Опыта на рынке</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>500 млн ₽</h3>
+                        <p>Сэкономлено клиентам</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Секция "Команда" -->
+        <section class="team">
+            <div class="container">
+                <h2>Наша команда</h2>
+                <div class="team-grid">
+                    <!-- Существующие члены команды -->
+                    <div class="team-member">
+                        <img src="images/team1.jpg" alt="Алексей Иванов">
+                        <h3>Алексей Иванов</h3>
+                        <p>Финансовый аналитик</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team2.jpg" alt="Мария Петрова">
+                        <h3>Мария Петрова</h3>
+                        <p>Эксперт по налогам</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team3.jpg" alt="Иван Сидоров">
+                        <h3>Иван Сидоров</h3>
+                        <p>Инвестиционный консультант</p>
+                    </div>
+
+                    <!-- Новые члены команды -->
+                    <div class="team-member">
+                        <img src="images/team4.jpg" alt="Полина Соколова">
+                        <h3>Полина Соколова</h3>
+                        <p>Специалист по пенсионному планированию</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team5.jpg" alt="Ульяна Морозова">
+                        <h3>Ульяна Морозова</h3>
+                        <p>Эксперт по страхованию</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team6.jpg" alt="Михаил Волков">
+                        <h3>Михаил Волков</h3>
+                        <p>Консультант по кредитам</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team7.jpg" alt="Арина Кузнецова">
+                        <h3>Арина Кузнецова</h3>
+                        <p>Специалист по управлению долгами</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team8.jpg" alt="Дмитрий Орлов">
+                        <h3>Дмитрий Орлов</h3>
+                        <p>Финансовый стратег</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team9.jpg" alt="Екатерина Лебедева">
+                        <h3>Екатерина Лебедева</h3>
+                        <p>Эксперт по недвижимости</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Финансовый консалтинг. Все права защищены.</p>
+            <div class="footer-grid">
+                <!-- Колонка 1: О компании -->
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <p>Wealthix — ваш надежный партнер в мире финансов. Мы помогаем достичь финансового успеха.</p>
+                </div>
+
+                <!-- Колонка 2: Быстрые ссылки -->
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="form.html">Консультация</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: Контакты -->
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Большая Семёновская, д. 38</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> finance-consulting@mail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 4: Социальные сети -->
+                <div class="footer-column">
+                    <h3>Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://web-linkedin.com/lander" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Копирайт -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Финансовый консалтинг. Все права защищены.</p>
+            </div>
         </div>
     </footer>
 </body>

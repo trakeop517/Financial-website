@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Услуги | Финансовый консалтинг</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
     <header>
         <div class="container">
             <div class="logo">
@@ -15,38 +19,118 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="form.html">Консультация</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="services.html"><i class="fas fa-hand-holding-usd"></i> Услуги</a></li>
+                    <li><a href="about.html"><i class="fas fa-users"></i> О нас</a></li>
+                    <li><a href="blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="form.html"><i class="fas fa-headset"></i> Консультация</a></li>
+                            <li>
+                                <label for="theme-toggle" class="theme-toggle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                </label>
+                            </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Секция "Услуги" -->
         <section class="services">
             <div class="container">
                 <h2>Наши услуги</h2>
                 <div class="service-grid">
+                    <!-- Услуга 1: Инвестиции -->
                     <div class="service-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Инвестиции</h3>
-                        <p>Поможем вам выбрать лучшие инвестиционные стратегии.</p>
-                        <a href="#" class="btn">Подробнее</a>
+                        <div class="card-content">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Инвестиции</h3>
+                            <p>Поможем вам выбрать лучшие инвестиционные стратегии, подберем подходящие инструменты и составим индивидуальный инвестиционный план.</p>
+                        </div>
+                        <div class="price">от 8999₽</div>
                     </div>
+
+                    <!-- Услуга 2: Бюджет -->
                     <div class="service-card">
-                        <i class="fas fa-coins"></i>
-                        <h3>Бюджет</h3>
-                        <p>Составим индивидуальный план управления вашим бюджетом.</p>
-                        <a href="#" class="btn">Подробнее</a>
+                        <div class="card-content">
+                            <i class="fas fa-coins"></i>
+                            <h3>Бюджет</h3>
+                            <p>Составим индивидуальный план управления вашим бюджетом, поможем оптимизировать расходы и увеличить сбережения.</p>
+                        </div>
+                        <div class="price">от 4999₽</div>
                     </div>
+
+                    <!-- Услуга 3: Налоги -->
                     <div class="service-card">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                        <h3>Налоги</h3>
-                        <p>Оптимизируем ваши налоговые обязательства.</p>
-                        <a href="#" class="btn">Подробнее</a>
+                        <div class="card-content">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <h3>Налоги</h3>
+                            <p>Оптимизируем ваши налоговые обязательства, поможем с оформлением налоговых вычетов и минимизацией налоговых платежей.</p>
+                        </div>
+                        <div class="price">от 6999₽</div>
+                    </div>
+
+                    <!-- Услуга 4: Финансовое планирование -->
+                    <div class="service-card">
+                        <div class="card-content">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3>Финансовое планирование</h3>
+                            <p>Разработаем долгосрочный финансовый план, который поможет вам достичь ваших жизненных финансовых целей.</p>
+                        </div>
+                        <div class="price">от 7999₽</div>
+                    </div>
+
+                    <!-- Услуга 5: Пенсионное планирование -->
+                    <div class="service-card">
+                        <div class="card-content">
+                            <i class="fas fa-piggy-bank"></i>
+                            <h3>Пенсионное планирование</h3>
+                            <p>Поможем вам подготовиться к пенсии, разработаем стратегию накоплений и инвестиций для комфортной жизни на пенсии.</p>
+                        </div>
+                        <div class="price">от 8999₽</div>
+                    </div>
+
+                    <!-- Услуга 6: Страхование -->
+                    <div class="service-card">
+                        <div class="card-content">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Страхование</h3>
+                            <p>Подберем оптимальные страховые продукты для защиты вашего здоровья, жизни, имущества, финансов и других видов. А также ваш собственный денежный страховой фонд.</p>
+                        </div>
+                        <div class="price">от 4999₽</div>
+                    </div>
+
+                    <!-- Услуга 7: Кредиты и займы -->
+                    <div class="service-card">
+                        <div class="card-content">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <h3>Кредиты и займы</h3>
+                            <p>Поможем выбрать лучшие условия для кредитов и займов, оптимизируем вашу кредитную нагрузку.</p>
+                        </div>
+                        <div class="price">от 6999₽</div>
+                    </div>
+
+                    <!-- Услуга 8: Управление долгами -->
+                    <div class="service-card">
+                        <div class="card-content">
+                            <i class="fas fa-balance-scale"></i>
+                            <h3>Управление долгами</h3>
+                            <p>Разработаем стратегию погашения долгов, поможем снизить финансовую нагрузку и улучшить кредитную историю.</p>
+                        </div>
+                        <div class="price">от 7999₽</div>
+                    </div>
+
+
+                                    <!-- Новая карточка: Консультация по недвижимости -->
+                    <div class="service-card">
+                        <div class="card-content">
+                            <i class="fas fa-home"></i>
+                            <h3>Консультация по недвижимости</h3>
+                            <p>Поможем вам разобраться в вопросах покупки, продажи или аренды недвижимости, а также дадим рекомендации по инвестициям в недвижимость.</p>
+                        </div>
+                        <div class="price">от 11999₽</div>
                     </div>
                 </div>
             </div>
@@ -55,7 +139,51 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Финансовый консалтинг. Все права защищены.</p>
+            <div class="footer-grid">
+                <!-- Колонка 1: О компании -->
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <p>Wealthix — ваш надежный партнер в мире финансов. Мы помогаем достичь финансового успеха.</p>
+                </div>
+
+                <!-- Колонка 2: Быстрые ссылки -->
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="form.html">Консультация</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: Контакты -->
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Большая Семёновская, д. 38</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> finance-consulting@mail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 4: Социальные сети -->
+                <div class="footer-column">
+                    <h3>Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://web-linkedin.com/lander" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Копирайт -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Финансовый консалтинг. Все права защищены.</p>
+            </div>
         </div>
     </footer>
 </body>
