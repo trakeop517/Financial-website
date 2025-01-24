@@ -1,3 +1,4 @@
+/* Глобальные стили */
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -8,12 +9,27 @@ body {
     padding: 0;
 }
 
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Шапка */
 header {
     background: linear-gradient(135deg, #2c3e50, #3498db);
     color: #fff;
@@ -39,6 +55,11 @@ header .logo img {
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.1);
     opacity: 0.9;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo-text {
@@ -75,12 +96,18 @@ nav ul li a {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+nav ul li a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
 nav ul li a:hover {
     text-decoration: none;
     color: #f1c40f;
     transform: translateY(-3px);
 }
 
+/* Секция "Герой" с видео-фоном */
 .hero {
     position: relative;
     color: #2c3e50;
@@ -93,6 +120,34 @@ nav ul li a:hover {
     justify-content: center;
 }
 
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#hero-video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out;
+}
+
 .btn-hero {
     display: inline-block;
     padding: 15px 30px;
@@ -102,6 +157,7 @@ nav ul li a:hover {
     font-size: 1.2rem;
     text-align: center;
     transition: background 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .btn-hero:hover {
@@ -109,13 +165,177 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
-footer {
-    background-color: #2c3e50;
-    color: #fff;
-    padding: 60px 0 20px 0;
-    margin-top: 40px;
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Секция "Услуги" */
+.services {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #2c3e50;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 90px;
+    align-items: stretch;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Фиксированная высота */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: auto; /* Прижимает цену к нижнему краю */
+}
+
+.service-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Прижимает кнопку к нижнему краю */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card .btn:hover {
+    background-color: #2980b9;
+}
+.service-card:hover {
+    transform: translateY(-10px); /* Поднимаем карточку на 10px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+    background-color: #e6f7ff;
+}
+
+
+
+/* Секция "Отзывы" */
+.testimonials {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.testimonial-card span {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Секция "Партнеры" */
 /* Стили для секции партнеров */
 .partners {
     padding: 80px 0;
@@ -227,270 +447,7 @@ footer {
     margin-top: 10px;
 }
 
-/* Услуги на главной странице*/
-.services {
-    padding: 80px 0;
-    background-color: #fff;
-}
-
-.services h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #2c3e50;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.service-card i {
-    font-size: 3rem;
-    color: #3498db;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
-
-.service-card p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.service-card .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 1rem;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.service-card .btn:hover {
-    background-color: #2980b9;
-}
-
-/* Отзывы на главной странице*/
-.testimonials {
-    padding: 80px 0;
-    background-color: #f9f9f9;
-}
-
-.testimonials h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #2c3e50;
-}
-
-.testimonial-grid {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.testimonial-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.testimonial-card p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.testimonial-card span {
-    font-size: 0.9rem;
-    color: #999;
-}
-
-/* Секция с партнерами */
-.partners {
-    padding: 80px 0;
-    background-color: #fff;
-}
-
-.partners h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #2c3e50;
-}
-
-.partner-grid {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.partner-item {
-    text-align: center;
-}
-
-.partner-item img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.partner-item p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Секция вопросы */
-.faq {
-    padding: 80px 0;
-    background-color: #f9f9f9;
-}
-
-.faq h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #2c3e50;
-}
-
-.faq-grid {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.faq-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.faq-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.faq-card details {
-    font-size: 1rem;
-    color: #666;
-}
-
-.faq-card summary {
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.faq-card p {
-    margin-top: 10px;
-}
-
-/* адаптивность */
-@media (max-width: 768px) {
-    .service-grid, .testimonial-grid, .partner-grid, .faq-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card, .testimonial-card, .partner-item, .faq-card {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .hero {
-        height: 50vh;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-}
-
-/* Анимации */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.hero h1 {
-    animation: fadeInDown 1s ease-out;
-}
-
-.hero p {
-    animation: fadeInUp 1s ease-out;
-}
-
-.btn-hero {
-    animation: fadeIn 1.5s ease-out;
-}
-
-/* Блок блог */
+/* Секция "Блог" */
 .blog {
     padding: 80px 0;
     background-color: #fff;
@@ -503,20 +460,305 @@ footer {
 }
 
 .blog-grid {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    align-items: stretch;
 }
+
 .blog-card {
     background-color: #f9f9f9;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.blog-card:hover {
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.blog-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.blog-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.blog-content .btn:hover {
+    background-color: #2980b9;
+}
+
+.blog-post img {
+    width: 50%;
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Секция "Обучающие материалы" */
+.learning {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.learning h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.learning-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.learning-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learning-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.learning-card i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.learning-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.learning-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.learning-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.learning-card .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Адаптивность */
+/* Стили для планшета */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 0 15px;
+    }
+
+    header .logo img {
+        height: 40px;
+    }
+
+    header .logo-text {
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 120px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .btn-hero {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .service-grid, .testimonial-grid, .blog-grid, .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card, .testimonial-card, .blog-card, .learning-card {
+        padding: 15px;
+    }
+
+    .service-card h3, .testimonial-card h3, .blog-card h3, .learning-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-card p, .testimonial-card p, .blog-card p, .learning-card p {
+        font-size: 0.95rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Стили для телефона */
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    /* Уменьшаем размеры логотипа и текста логотипа */
+    header .logo img {
+        height: 25px; /* Уменьшаем высоту логотипа */
+    }
+
+    header .logo-text {
+        font-size: 0.9rem; /* Уменьшаем размер текста логотипа */
+    }
+
+    /* Настройка навигации для телефонов */
+    nav ul {
+        flex-direction: row; /* Оставляем элементы горизонтально */
+        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку, если не помещаются */
+        justify-content: center; /* Центрируем элементы */
+    }
+
+    nav ul li {
+        margin: 5px 8px; /* Уменьшаем отступы между элементами */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* Уменьшаем размер шрифта в навигации */
+        padding: 5px 8px; /* Уменьшаем отступы внутри ссылок */
+    }
+
+    .hero {
+        padding: 60px 0; /* Уменьшаем отступы в секции hero */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Уменьшаем размер заголовка */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Уменьшаем размер текста */
+    }
+
+    .btn-hero {
+        padding: 8px 16px; /* Уменьшаем размер кнопки */
+        font-size: 0.8rem; /* Уменьшаем размер текста кнопки */
+    }
+
+    .service-grid, .testimonial-grid, .blog-grid, .learning-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card, .testimonial-card, .blog-card, .learning-card {
+        padding: 10px;
+    }
+
+    .service-card h3, .testimonial-card h3, .blog-card h3, .learning-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p, .testimonial-card p, .blog-card p, .learning-card p {
+        font-size: 0.9rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .service-card i, .learning-card i {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .blog-card img {
+        height: 150px;
+    }
 }
 
 /* Подвал */
@@ -603,56 +845,40 @@ footer {
     color: #ddd;
 }
 
-/* Секция "Обучающие материалы" */
-.learning {
+
+/* Стили для страниц статей и обучающих материалов */
+.blog-post, .learning-post {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
-.learning h2 {
+.blog-post h1, .learning-post h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
-.learning-grid {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.learning-card {
-    background-color: #fff;
-    padding: 30px;
+.blog-post img, .learning-post img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    text-align: center;
-    flex: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.learning-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.learning-card i {
-    font-size: 3rem;
-    color: #3498db;
     margin-bottom: 20px;
 }
 
-.learning-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+.blog-post h2, .learning-post h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
-.learning-card p {
-    font-size: 1rem;
+.blog-post p, .learning-post p {
+    font-size: 1.1rem;
     color: #666;
+    line-height: 1.8;
     margin-bottom: 20px;
 }
 
-.learning-card .btn {
+.blog-post .btn, .learning-post .btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #3498db;
@@ -663,6 +889,527 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.learning-card .btn:hover {
+.blog-post .btn:hover, .learning-post .btn:hover {
     background-color: #2980b9;
 }
+
+/* Секция "Форма консультации" */
+.consultation-form {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.consultation-form h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.consultation-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-form .form-group {
+    margin-bottom: 20px;
+}
+
+.consultation-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.consultation-form input,
+.consultation-form select,
+.consultation-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consultation-form input:focus,
+.consultation-form select:focus,
+.consultation-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.consultation-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.consultation-form .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.consultation-form .btn-submit:hover {
+    background: linear-gradient(45deg, #2980b9, #34495e);
+    transform: translateY(-3px);
+}
+
+.btn-submit {
+    display: inline-block;
+    width: auto;
+    max-width: 200px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(45deg, #2980b9, #34495e);
+    transform: translateY(-3px);
+}
+
+
+/* Секция "О нас" */
+.about-hero {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.5rem;
+}
+
+/* Секция "Миссия компании" */
+.mission {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.mission p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Секция "Достижения" */
+.achievements {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.achievements h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.achievement-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.achievement-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-card i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.achievement-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.achievement-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Секция "Команда" */
+.team {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-member {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Секция "Отзывы клиентов" */
+.testimonials {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.testimonial-card span {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.services, .testimonials, .partners, .faq, .learning {
+    background-color: #f0f0f0;
+    padding: 80px 0;
+}
+
+.theme-toggle-checkbox {
+    display: none;
+}
+
+#theme-toggle:checked ~ main {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ header,
+#theme-toggle:checked ~ footer {
+    background: #000000;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main h1 {
+    color: #000000;
+}
+
+#theme-toggle:checked ~ main .hero h1 {
+    color: #ffffff;
+}
+#theme-toggle:checked ~ main h2
+#theme-toggle:checked ~ main h3
+#theme-toggle:checked ~ main p,
+#theme-toggle:checked ~ footer h3,
+#theme-toggle:checked ~ footer p,
+#theme-toggle:checked ~ footer a,
+#theme-toggle:checked ~ header a {
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .service-card,
+#theme-toggle:checked ~ main .testimonial-card,
+#theme-toggle:checked ~ main .faq-card,
+#theme-toggle:checked ~ main .blog-card,
+#theme-toggle:checked ~ main .learning-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .service-card:hover,
+#theme-toggle:checked ~ main .testimonial-card:hover,
+#theme-toggle:checked ~ main .faq-card:hover,
+#theme-toggle:checked ~ main .blog-card:hover,
+#theme-toggle:checked ~ main .learning-card:hover {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+#theme-toggle:checked ~ main .btn-hero,
+#theme-toggle:checked ~ main .btn,
+#theme-toggle:checked ~ main .btn-submit {
+    background: linear-gradient(45deg, #555, #333);
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .btn-hero:hover,
+#theme-toggle:checked ~ main .btn:hover,
+#theme-toggle:checked ~ main .btn-submit:hover {
+    background: linear-gradient(45deg, #777, #555);
+}
+
+#theme-toggle:checked ~ main img {
+    filter: brightness(0.8);
+}
+
+#theme-toggle:checked ~ main .service-card,
+#theme-toggle:checked ~ main .testimonial-card,
+#theme-toggle:checked ~ main .faq-card,
+#theme-toggle:checked ~ main .blog-card,
+#theme-toggle:checked ~ main .learning-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .service-card h3,
+#theme-toggle:checked ~ main .service-card p,
+#theme-toggle:checked ~ main .service-card .price {
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .testimonial-card h3,
+#theme-toggle:checked ~ main .testimonial-card p,
+#theme-toggle:checked ~ main .testimonial-card span {
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .faq-card summary,
+#theme-toggle:checked ~ main .faq-card p {
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .blog-card h3,
+#theme-toggle:checked ~ main .blog-card p {
+    color: #ffffff;
+
+#theme-toggle:checked ~ main .learning-card h3,
+#theme-toggle:checked ~ main .learning-card p {
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .mission {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .mission h2,
+#theme-toggle:checked ~ main .mission p {
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .achievements {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .achievements h2,
+#theme-toggle:checked ~ main .achievements .achievement-card h3,
+#theme-toggle:checked ~ main .achievements .achievement-card p {
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .team {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .team h2,
+#theme-toggle:checked ~ main .team .team-member h3,
+#theme-toggle:checked ~ main .team .team-member p {
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .achievement-card,
+#theme-toggle:checked ~ main .team-member {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ main .achievement-card:hover,
+#theme-toggle:checked ~ main .team-member:hover {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #ffffff;
+    transition: stroke 0.3s ease;
+}
+
+#theme-toggle:checked ~ header .theme-toggle svg {
+    stroke: #f1c40f;
+}
+
+.service-card:hover,
+.testimonial-card:hover,
+.faq-card:hover,
+.blog-card:hover,
+.learning-card:hover,
+.achievement-card:hover,
+.team-member:hover {
+    background-color: #e6f7ff;
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.consultation-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+}
+
+.consultation-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    margin-top: 130px;
+}
+
+.consultation-form p {
+    font-size: 1.2rem;
+    margin-bottom: 110px;
+}
+.consultation-form .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.consultation-form .btn:hover {
+    background: linear-gradient(45deg, #2980b9, #34495e);
+    transform: translateY(-5px);
+}
+
+.footer-mini {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-mini .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ flex-shrink: 0;
+
